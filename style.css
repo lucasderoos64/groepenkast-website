@@ -261,6 +261,8 @@ margin-top:40px;
 .voordelen-grid {
 grid-template-columns:1fr;
 }
+
+}
   
 .voordeel {
 background:#f8f9fc;
