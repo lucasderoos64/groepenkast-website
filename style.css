@@ -170,6 +170,7 @@ margin-top:40px;
 background:white;
 padding:30px;
 border-radius:12px;
+min-width:0;
 }
 
 /* ================= */
@@ -257,6 +258,24 @@ grid-template-columns:1fr;
 
 .nav {
 flex-direction:column;
+}
+
+}
+
+/* Tablet */
+@media (max-width:1000px){
+
+.reviews-grid {
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobiel */
+@media (max-width:600px){
+
+.reviews-grid {
+grid-template-columns:1fr;
 }
 
 }
