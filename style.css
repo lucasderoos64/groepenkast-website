@@ -302,6 +302,13 @@ grid-template-columns:repeat(3,1fr);
 gap:25px;
 margin-top:40px;
 }
+@media (max-width:600px){
+
+.reviews-grid {
+grid-template-columns:1fr;
+}
+
+}
 
 .review {
 background:white;
