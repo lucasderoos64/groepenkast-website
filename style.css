@@ -12,6 +12,7 @@ font-family:Arial, sans-serif;
 body {
 background:#f5f6fa;
 color:#1a1a1a;
+line-height:1.6;
 }
 
 .container {
@@ -28,9 +29,6 @@ header {
 background:#0d1b2a;
 color:white;
 padding:20px 0;
-position:sticky;
-top:0;
-z-index:1000;
 }
 
 .nav {
@@ -56,16 +54,20 @@ text-decoration:none;
 
 .hero {
 position:relative;
-background:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070') center/cover;
+background:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070') center/cover no-repeat;
+padding:160px 0;
 color:white;
-padding:140px 0;
 text-align:center;
 }
 
 .hero-overlay {
 position:absolute;
-inset:0;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.6);
+z-index:1;
 }
 
 .hero-wrapper {
@@ -73,12 +75,20 @@ position:relative;
 z-index:2;
 }
 
+.hero h2 {
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p {
+opacity:0.9;
+}
+
 .hero-buttons {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-max-width:600px;
-margin:40px auto 0;
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:40px;
 }
 
 .hero-card {
@@ -87,8 +97,9 @@ color:#333;
 padding:30px;
 border-radius:12px;
 text-decoration:none;
+width:260px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
 transition:0.3s;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 .hero-card:hover {
@@ -112,9 +123,9 @@ padding:100px 0;
 }
 
 h2 {
+text-align:center;
 margin-bottom:40px;
 font-size:32px;
-text-align:center;
 }
 
 /* ================= */
@@ -124,15 +135,15 @@ text-align:center;
 .diensten-grid {
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:25px;
+gap:30px;
 }
 
 .dienst {
 background:white;
 padding:30px;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
 text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 /* ================= */
@@ -149,24 +160,14 @@ gap:30px;
 background:white;
 padding:40px;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
 text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .prijs {
 font-size:32px;
 margin:20px 0;
 color:orange;
-}
-
-.primary {
-background:orange;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:6px;
-display:inline-block;
-margin-top:20px;
 }
 
 /* ================= */
@@ -183,19 +184,6 @@ align-items:center;
 .over-image img {
 width:100%;
 border-radius:12px;
-}
-
-.over-cards {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin-top:20px;
-}
-
-.over-card {
-background:white;
-padding:15px;
-border-radius:8px;
 }
 
 /* ================= */
@@ -225,36 +213,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 margin:0 auto 15px;
-}
-
-/* ================= */
-/* CTA */
-/* ================= */
-
-.cta {
-background:#0d1b2a;
-color:white;
-text-align:center;
-}
-
-/* ================= */
-/* CONTACT */
-/* ================= */
-
-.contact-form {
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:600px;
-margin:auto;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-padding:15px;
-border-radius:6px;
-border:1px solid #ddd;
 }
 
 /* ================= */
@@ -289,11 +247,50 @@ background:white;
 padding:25px;
 border-radius:12px;
 text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.stars {
-color:#FFD700;
-margin-bottom:10px;
+/* ================= */
+/* CONTACT */
+/* ================= */
+
+.contact-form {
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:600px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+padding:15px;
+border-radius:6px;
+border:1px solid #ddd;
+}
+
+/* ================= */
+/* FOOTER */
+/* ================= */
+
+.footer {
+background:#0d1b2a;
+color:white;
+padding:80px 0;
+}
+
+.footer-grid {
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+.footer-bottom {
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.1);
 }
 
 /* ================= */
@@ -317,7 +314,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:20px;
 text-decoration:none;
 }
 
@@ -327,75 +323,4 @@ background:#0d1b2a;
 
 .whatsapp {
 background:#25D366;
-}
-
-/* ================= */
-/* FOOTER */
-/* ================= */
-
-.footer {
-background:#0d1b2a;
-color:white;
-}
-
-.footer-grid {
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
-}
-
-.footer-bottom {
-text-align:center;
-margin-top:40px;
-padding-top:20px;
-border-top:1px solid rgba(255,255,255,0.1);
-}
-
-/* ================= */
-/* RESPONSIVE */
-/* ================= */
-
-@media (max-width:1000px){
-
-.diensten-grid,
-.voordelen-grid,
-.werkwijze-grid,
-.footer-grid {
-grid-template-columns:repeat(2,1fr);
-}
-
-.prijzen-grid {
-grid-template-columns:1fr 1fr;
-}
-
-.over-grid {
-grid-template-columns:1fr;
-}
-
-.reviews-grid {
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media (max-width:700px){
-
-.hero-buttons {
-grid-template-columns:1fr;
-}
-
-.diensten-grid,
-.prijzen-grid,
-.voordelen-grid,
-.werkwijze-grid,
-.reviews-grid,
-.footer-grid {
-grid-template-columns:1fr;
-}
-
-.nav {
-flex-direction:column;
-gap:10px;
-}
-
 }
