@@ -7,6 +7,7 @@ Statische website voor GitHub Pages.
 - `index.html`
 - `styles.css`
 - `script.js`
+- `assets/`
 
 ## Live zetten op GitHub Pages
 
@@ -24,4 +25,4 @@ De site komt daarna beschikbaar via de GitHub Pages URL.
 - WhatsApp placeholder: `https://wa.me/31600000000`
 - Telefoonnummer: `06 00000000`
 - E-mailadres: `info@verdeelkastenvervangen.nl`
-- Voorbeeldreviews en werkfoto placeholders
+- Voorbeeldreviews
